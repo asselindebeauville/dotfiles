@@ -31,6 +31,7 @@
       homebrew = {
         enable = true;
         user = "kyllian";
+        onActivation.cleanup = "zap";
       };
 
       # Necessary for using flakes on this system.
