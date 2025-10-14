@@ -21,6 +21,9 @@
   outputs = inputs@{ self, nixpkgs, nix-darwin, nix-homebrew, ... }:
   let
     configuration = { pkgs, ... }: {
+      # Set the primary user.
+      system.primaryUser = "kyllian";
+
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
       environment.systemPackages =
@@ -30,7 +33,6 @@
       # Manage Homebrew packages.
       homebrew = {
         enable = true;
-        user = "kyllian";
         onActivation.cleanup = "zap";
       };
 
@@ -58,17 +60,17 @@
       modules = [
         configuration
         nix-homebrew.darwinModules.nix-homebrew
-        {
+        ({ config, ... }: {
           nix-homebrew = {
             enable = true;
-            user = "kyllian";
+            user = config.system.primaryUser;
             taps = {
               "homebrew/homebrew-core" = inputs.homebrew-core;
               "homebrew/homebrew-cask" = inputs.homebrew-cask;
             };
             mutableTaps = false;
           };
-        }
+        })
         ({ config, ... }: {
           homebrew.taps = builtins.attrNames config.nix-homebrew.taps;
         })
