@@ -27,6 +27,12 @@
         [ pkgs.vim
         ];
 
+      # Manage Homebrew packages.
+      homebrew = {
+        enable = true;
+        user = "kyllian";
+      };
+
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
 
