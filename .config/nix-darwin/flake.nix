@@ -36,6 +36,7 @@
 
         casks = [
           "colemak-dh"
+          "ghostty"
         ];
       };
 
