@@ -33,6 +33,10 @@
       homebrew = {
         enable = true;
         onActivation.cleanup = "zap";
+
+        casks = [
+          "colemak-dh"
+        ];
       };
 
       # Necessary for using flakes on this system.
