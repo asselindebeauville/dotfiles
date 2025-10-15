@@ -39,6 +39,17 @@
         ];
       };
 
+      # Configure keyboard mappings.
+      system.keyboard = {
+        enableKeyMapping = true;
+        userKeyMapping = [
+          {
+            HIDKeyboardModifierMappingSrc = 30064771129; # Caps Lock
+            HIDKeyboardModifierMappingDst = 30064771114; # Backspace
+          }
+        ];
+      };
+
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
 
