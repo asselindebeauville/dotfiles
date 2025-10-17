@@ -28,6 +28,7 @@
       # $ nix-env -qaP | grep wget
       environment.systemPackages = [
         pkgs.git
+        pkgs.stow
       ];
 
       # Manage Homebrew packages.
