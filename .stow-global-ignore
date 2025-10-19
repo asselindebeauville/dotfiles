@@ -5,3 +5,5 @@
 ^/README.*
 ^/LICENSE.*
 ^/COPYING
+
+\.DS_Store
