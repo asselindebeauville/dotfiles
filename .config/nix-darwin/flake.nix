@@ -24,10 +24,16 @@
       # Set the primary user.
       system.primaryUser = "kyllian";
 
+      # Set environment variables.
+      environment.variables = {
+        EDITOR = "nvim";
+      };
+
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
       environment.systemPackages = [
         pkgs.git
+        pkgs.neovim
         pkgs.stow
       ];
 
