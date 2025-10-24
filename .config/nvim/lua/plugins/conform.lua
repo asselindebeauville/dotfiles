@@ -23,5 +23,8 @@ return {
         timeout_ms = 500,
       },
     },
+    init = function()
+      vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
+    end,
   },
 }
