@@ -34,6 +34,7 @@
       environment.systemPackages = [
         pkgs.git
         pkgs.neovim
+        pkgs.nixfmt
         pkgs.stow
       ];
 
