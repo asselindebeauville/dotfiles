@@ -58,6 +58,23 @@
             ];
           };
 
+          # Configure system defaults.
+          system.defaults = {
+            dock = {
+              autohide = true;
+              autohide-delay = 0.0;
+              autohide-time-modifier = 0.0;
+              launchanim = false;
+              mineffect = "scale";
+              minimize-to-application = true;
+              orientation = "left";
+              persistent-apps = [ ];
+              show-process-indicators = false;
+              show-recents = false;
+              showhidden = true;
+            };
+          };
+
           # Configure keyboard mappings.
           system.keyboard = {
             enableKeyMapping = true;
