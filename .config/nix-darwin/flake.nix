@@ -44,6 +44,7 @@
             pkgs.git
             pkgs.neovim
             pkgs.nixfmt
+            pkgs.rustup
             pkgs.stow
           ];
 
