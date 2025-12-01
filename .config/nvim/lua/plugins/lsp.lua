@@ -10,6 +10,9 @@ return {
             -- Lua
             "lua_ls",
             "stylua",
+
+            -- Rust
+            "rust_analyzer",
           },
         },
       },
