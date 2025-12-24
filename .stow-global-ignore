@@ -4,6 +4,7 @@
 
 ^/README.*
 ^/LICENSE.*
+^/UNLICENSE.*
 ^/COPYING
 
 \.DS_Store
