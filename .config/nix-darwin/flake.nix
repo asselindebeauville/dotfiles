@@ -54,7 +54,6 @@
             onActivation.cleanup = "zap";
 
             casks = [
-              "colemak-dh"
               "ghostty"
             ];
           };
