@@ -4,5 +4,7 @@
 	format = ssh
 [commit]
 	gpgSign = true
+[tag]
+	gpgSign = true
 [include]
 	path = config.local
