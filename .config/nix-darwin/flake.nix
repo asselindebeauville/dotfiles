@@ -46,6 +46,7 @@
             pkgs.nixfmt
             pkgs.rustup
             pkgs.stow
+            pkgs.uv
           ];
 
           # Manage Homebrew packages.
